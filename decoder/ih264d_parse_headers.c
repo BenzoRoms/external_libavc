@@ -802,6 +802,7 @@ WORD32 ih264d_parse_sps(dec_struct_t *ps_dec, dec_bit_stream_t *ps_bitstrm)
         ps_seq->u1_mb_aff_flag = ih264d_get_bit_h264(ps_bitstrm);
         COPYTHECONTEXT("SPS: mb_adaptive_frame_field_flag",
                         ps_seq->u1_mb_aff_flag);
+        return ERROR_FEATURE_UNAVAIL;
 
     }
     else
